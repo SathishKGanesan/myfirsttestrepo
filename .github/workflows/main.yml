@@ -6,9 +6,10 @@ jobs:
   testjob:
     runs-on: ubuntu-latest
     steps:
-      - name: test env
-        env:
-          test_var: "hello"
-        run: echo "$test_var"
-        
+      - name: checkout code
+        uses: actions/checkout
+      - name: execute code
+        run: |
+          chmod +x myfirstbash.sh
+          bash myfirstbash.sh
      
