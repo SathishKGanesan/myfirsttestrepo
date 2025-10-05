@@ -4,7 +4,7 @@ on:
 
 jobs:
   testjob:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: test env
         test_var: "hello"
