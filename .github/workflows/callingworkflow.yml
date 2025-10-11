@@ -8,3 +8,8 @@ jobs:
      uses: ./.github/workflows/called.yml
      with:
        info: "hello"
+  outputjob:
+    needs: calling
+    runs-on: ubuntu-latest
+    run:
+      echo "${{ needs.calling.output.OUTVALUE }}"
