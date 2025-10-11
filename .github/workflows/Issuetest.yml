@@ -15,6 +15,7 @@ jobs:
         run: |
           if [[ "$issue_title" == *"bug"* ]]; then
             echo "Issue is about a bug!"
+            echo "$issue_title"
             echo "Assigning Label - BUG"
           else
             echo "Not a bug"
