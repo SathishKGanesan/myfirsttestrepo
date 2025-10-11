@@ -7,7 +7,8 @@ on:
         description: "info to be sent"
         type: string
     outputs:
-      OUTVALUE: ${{ jobs.called-job.outputs.OUTVALUE }}
+      OUTVALUE:
+        value: ${{ jobs.called-job.outputs.OUTVALUE }}
 jobs:
   called-job:
     runs-on: ubuntu-latest
