@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: getting input from called worflow
         run:
-          echo "the value is ${{ github.event.inputs.info }}"
+          echo "the value is ${{ inputs.info }}"
       
