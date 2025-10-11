@@ -2,4 +2,14 @@ name: called workflow
 on:
   workflow-call:
     inputs:
+      info:
+        required: yes
+        description: "info to be sent"
+        type: string
+jobs:
+  called-job:
+    runs-on: ubuntu-latest
+     - step: getting input from called worflow
+       run:
+         echo "the value is ${{ github.event.inputs.info }}"
       
