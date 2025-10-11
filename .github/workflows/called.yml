@@ -13,11 +13,12 @@ jobs:
   called-job:
     runs-on: ubuntu-latest
     outputs:
-      OUTVALUE: ${{ steps.INOUT.output.FEEDBACK }}
+      OUTVALUE: ${{ steps.INOUT.outputs.FEEDBACK }}
     steps:
       - name: getting input from called worflow
         id: INOUT
         run: |
           echo "the value is ${{ inputs.info }}"
           echo "FEEDBACK=ROCKY" >> $GITHUB_OUTPUT
+          echo "${{ steps.INOUT.outputs.FEEDBACK }}"
       
