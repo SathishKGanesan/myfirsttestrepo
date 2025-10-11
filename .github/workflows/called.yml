@@ -1,0 +1,5 @@
+name: called workflow
+on:
+  workflow-call:
+    inputs:
+      
