@@ -14,4 +14,4 @@ jobs:
     steps:
       - name: output_message
         run:
-          echo "${{ needs.calling.output.OUTVALUE }}"
+          echo "${{ needs.calling.output.OUTVALUE2 }}"
