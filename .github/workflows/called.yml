@@ -24,4 +24,12 @@ jobs:
       - name: print output
         run:
           echo "${{ steps.INOUT.outputs.FEEDBACK }}"
+
+  test-job:
+    needs: called-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: output previous job
+        run:
+          echo "${{ needs.called-job.outputs.OUTVALUE }}"
       
