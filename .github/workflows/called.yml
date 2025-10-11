@@ -7,7 +7,7 @@ on:
         description: "info to be sent"
         type: string
     outputs:
-      OUTVALUE2:
+      OUTVALUE:
         value: ${{ jobs.called-job.outputs.OUTVALUE }}
 jobs:
   called-job:
