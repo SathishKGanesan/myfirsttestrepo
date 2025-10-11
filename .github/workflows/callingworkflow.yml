@@ -11,5 +11,7 @@ jobs:
   outputjob:
     needs: calling
     runs-on: ubuntu-latest
-    run:
-      echo "${{ needs.calling.output.OUTVALUE }}"
+    steps:
+      - name: output_message
+        run:
+          echo "${{ needs.calling.output.OUTVALUE }}"
