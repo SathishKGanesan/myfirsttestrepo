@@ -20,5 +20,8 @@ jobs:
         run: |
           echo "the value is ${{ inputs.info }}"
           echo "FEEDBACK=ROCKY" >> $GITHUB_OUTPUT
+
+      - name: print output
+        run:
           echo "${{ steps.INOUT.outputs.FEEDBACK }}"
       
