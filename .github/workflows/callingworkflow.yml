@@ -1,0 +1,15 @@
+name: calling-workflow-test
+on:
+  push:
+    branches: [main]
+
+jobs:
+  calling:
+     uses: ./.github/workflows/called.yml
+     with:
+       info: "hello"
+
+       
+       
+  
+      
