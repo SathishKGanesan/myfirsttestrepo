@@ -1,6 +1,6 @@
 name: called workflow
 on:
-  workflow-call:
+  workflow_call:
     inputs:
       info:
         required: yes
