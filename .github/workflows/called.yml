@@ -3,7 +3,7 @@ on:
   workflow_call:
     inputs:
       info:
-        required: yes
+        required: true
         description: "info to be sent"
         type: string
 jobs:
