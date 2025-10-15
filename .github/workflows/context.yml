@@ -1,0 +1,11 @@
+name: check github context
+on:
+  push:
+
+jobs:
+  testjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print context
+        run:
+          echo "$github.event"
