@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: step_1
         run: exit 1
+        if: ${{ runner.os == 'linux' }}
       - name: step_2
         run: echo "hi"
         if: failure()
